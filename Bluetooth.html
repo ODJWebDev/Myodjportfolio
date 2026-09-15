@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<style>
+    body{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  background-color: silver;
+  font-weight: larger;
+  margin: 0px;
+  font-family: Arial,Sans-Serif;
+}
+.Bluetooth{
+  margin-top: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  height: 100px;
+  width: 400px;
+  box-shadow: 4px 5px 2px black;
+  border: 5px double blue;
+}
+h4{
+  margin-right: 10px;
+  text-align: center;
+}
+input{
+  display: none;
+}
+.back{
+    height: 50px;
+    width: 100px;
+    background: #0003ff;
+    border-radius: 5px;
+    color: white;
+    margin-top: 30rem;
+    margin-left: 30rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+}
+.toggle{
+  width: 90px;
+  height: 45px;
+  background: #7b7b7b;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.toggle::before{
+  content: "Off";
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  background: white;
+  box-shadow: 0px 2px 8px #4d4d4d;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input:checked + .toggle{
+  background: #2196f3;
+}
+input:checked + .toggle::before{
+  transform: translateX(48px);
+  content: "On";
+}
+</style>
+<body>
+     <div class="Bluetooth">
+    <h4>Bluetooth ON/OFF toggle switch<br> Turn OFF\ON</h4>
+    <label>
+       <input type="checkbox">
+       <div class="toggle"></div>
+    </label>
+    </div>
+
+       <a class="back" href="index.html#projects">Back</a>
+    
+</body>
+</html>
